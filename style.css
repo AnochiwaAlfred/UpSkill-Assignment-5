@@ -190,5 +190,6 @@ a{
         margin-left: 7px;
     }
 
-
+    .name{
+        display:none;
 }
