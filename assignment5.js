@@ -5,8 +5,8 @@ function fahToCel(fahValue){
     let celValue=((fahValue-32)*5)/9;
         return celValue
 }
-// console.log(fahToCel(220))
-// console.log(fahToCel(-23))
+// console.log(fahToCel(90)) // 32.22222222222222
+// console.log(fahToCel(-23)) // -30.555555555555557
 
 
 
@@ -23,7 +23,8 @@ function arrayAverage(input){
     average = sum/array.length;
     return average
 }
-// console.log(arrayAverage('[1,4,6,34,81,23,43]'))
+// console.log(arrayAverage('[1,2,3,4,5,6,7,8,9,10]')) // 5.5
+// console.log(arrayAverage('[1,4,6,34,81,23,43]')) // 27.428571428571427
 
 
 
@@ -42,9 +43,9 @@ function checkDivisibility(n,x,y){
         return `${check}, ${n} is not divisible by ${x} and ${y}`
     }
 }
-// console.log(checkDivisibility(20,2,'3'))
-// console.log(checkDivisibility(20,2,3))
-// console.log(checkDivisibility(270,2,3))
+// console.log(checkDivisibility(20,2,'3'))  // { Error: 'All parameters must be numbers.' }
+// console.log(checkDivisibility(20,2,3)) // false, 20 is not divisible by 2 and 3
+// console.log(checkDivisibility(270,2,3)) // true, 270 is divisible by both 2 and 3
 
 
 
@@ -88,9 +89,9 @@ function checkPrime(input){
     }
     return isPrime
 }
-// console.log(checkPrime(23))
-// console.log(checkPrime(27))
-// console.log(checkPrime(1215))
+// console.log(checkPrime(23))  // true 
+// console.log(checkPrime(27))  // false
+// console.log(checkPrime(1215))  // false
 
 
 
@@ -109,7 +110,8 @@ function filterArray(input1){
     }
     return array
 }
-// console.log(filterArray('[34, -98, -90,56]'))
+// console.log(filterArray('[34, -98, -90,56]'))  // [ 34, 56 ]
+// console.log(filterArray('[20, 6, -19, 900, -98, 45, -90,    56]'))  // [ 20, 6, 900, 45, 56 ]
 
 
 
@@ -170,9 +172,8 @@ function toTitleCase(str) { //Copied
     });
 }
 
-// console.log(hashTagGenerator('obi will soon enter'))
-// console.log(hashTagGenerator('popular hash tAgs On twitteR'))
-
-            // TEST THE CONDITIONS
-// console.log(hashTagGenerator(''))
-// console.log(hashTagGenerator(' The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria'))
+// console.log(hashTagGenerator('obi will soon enter'))  //  #ObiWillSoonEnter
+// console.log(hashTagGenerator('popular hash tAgs On twitteR'))  //  #PopularHashTagsOnTwitter
+// TEST THE CONDITIONS
+// console.log(hashTagGenerator(''))  // false
+// console.log(hashTagGenerator(' The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria'))  // false
