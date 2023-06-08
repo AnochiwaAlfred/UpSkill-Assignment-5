@@ -3,10 +3,10 @@
 
 function fahToCel(fahValue){
     let celValue=((fahValue-32)*5)/9;
-    console.log(celValue)
+        return celValue
 }
-// fahToCel(220)
-// fahToCel(-23)
+// console.log(fahToCel(220))
+// console.log(fahToCel(-23))
 
 
 
@@ -21,9 +21,9 @@ function arrayAverage(input){
         sum+=array[i]
     }
     average = sum/array.length;
-    console.log(average)
+    return average
 }
-// arrayAverage('[1,4,6,34,81,23,43]')
+// console.log(arrayAverage('[1,4,6,34,81,23,43]'))
 
 
 
@@ -34,13 +34,14 @@ function checkDivisibility(n,x,y){
     var check;
     if (n%x==0 & n%y==0){
         check=true
+        return `${check}, ${n} is divisible by both ${x} and ${y}`
     }else{
         check=false
+        return `${check}, ${n} is not divisible by ${x} and ${y}`
     }
-    console.log(check)
 }
-// checkDivisibility(20,2,3)
-// checkDivisibility(270,2,3)
+// console.log(checkDivisibility(20,2,3))
+// console.log(checkDivisibility(270,2,3))
 
 
 
@@ -82,11 +83,11 @@ function checkPrime(input){
             break
         }
     }
-    console.log(isPrime)
+    return isPrime
 }
-// checkPrime(23)
-// checkPrime(27)
-// checkPrime(1215)
+// console.log(checkPrime(23))
+// console.log(checkPrime(27))
+// console.log(checkPrime(1215))
 
 
 
@@ -103,9 +104,9 @@ function filterArray(input1){
             array.push(num)
         }
     }
-    console.log(array)
+    return array
 }
-// filterArray('[34, -98, -90,56]')
+// console.log(filterArray('[34, -98, -90,56]'))
 
 
 
@@ -142,7 +143,7 @@ function fizzBuzz(){
 
 function hashTagGenerator(hashIn){
     if(hashIn===''){
-        console.log(false)
+        return false
     }else{
         array = hashIn.split(" ")
         array2 = ['#']
@@ -152,9 +153,9 @@ function hashTagGenerator(hashIn){
         }
         new_string=array2.join("")
         if(new_string.length>140){  // check how to get length of string
-            console.log(false)
+            return false
         }else{
-            console.log(new_string)
+            return new_string
         }
     }
 }
@@ -166,5 +167,5 @@ function toTitleCase(str) { //Copied
     });
 }
 
-// hashTagGenerator('obi will soon enter');
-// hashTagGenerator('popular hash tAgs On twitteR');
+// console.log(hashTagGenerator('obi will soon enter'))
+// console.log(hashTagGenerator('popular hash tAgs On twitteR'))
