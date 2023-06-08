@@ -32,7 +32,9 @@ function arrayAverage(input){
 // Create a function that checks if a number, n is divisible by two numbers x and y. All inputs are positive, non-zero digits.
 function checkDivisibility(n,x,y){
     var check;
-    if (n%x==0 & n%y==0){
+    if (typeof n !== 'number' || typeof x !== 'number' || typeof y !== 'number') {
+        return {'Error':'All parameters must be numbers.'}
+    }else if (n%x==0 & n%y==0){
         check=true
         return `${check}, ${n} is divisible by both ${x} and ${y}`
     }else{
@@ -40,6 +42,7 @@ function checkDivisibility(n,x,y){
         return `${check}, ${n} is not divisible by ${x} and ${y}`
     }
 }
+// console.log(checkDivisibility(20,2,'3'))
 // console.log(checkDivisibility(20,2,3))
 // console.log(checkDivisibility(270,2,3))
 
@@ -169,3 +172,7 @@ function toTitleCase(str) { //Copied
 
 // console.log(hashTagGenerator('obi will soon enter'))
 // console.log(hashTagGenerator('popular hash tAgs On twitteR'))
+
+            // TEST THE CONDITIONS
+// console.log(hashTagGenerator(''))
+// console.log(hashTagGenerator(' The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria'))
